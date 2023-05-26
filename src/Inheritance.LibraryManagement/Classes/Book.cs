@@ -32,8 +32,8 @@
         public string GetBookInfo()
         {
             
-            return @$"
-Title:          {Title}
+            return
+$@"Title:          {Title}
 Author:         {Author}
 ISBN:           {Isbn}
 Availability:   {Availability}

@@ -44,8 +44,8 @@
                 bookName += $"{count++}. {item.Title}";
             }
             
-            return @$"
-Member Name: {Name}
+            return
+$@"Member Name: {Name}
 Member ID: {Id}
 Books Borrowed:
 
