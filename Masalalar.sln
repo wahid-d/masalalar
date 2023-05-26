@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C61E52F7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays.Tests", "tests\Arrays.Tests\Arrays.Tests.csproj", "{9601D149-EFEC-4B78-BA54-9FCF9B914F6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance.LibraryManagement", "src\Inheritance.LibraryManagement\Inheritance.LibraryManagement.csproj", "{E8BE608C-C890-4DD1-9AFA-44CD20875F61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance.LibraryManagement.Tests", "tests\Inheritance.LibraryManagement.Tests\Inheritance.LibraryManagement.Tests.csproj", "{903C0004-81DD-4368-8B91-0C558E4694F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +32,19 @@ Global
 		{9601D149-EFEC-4B78-BA54-9FCF9B914F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9601D149-EFEC-4B78-BA54-9FCF9B914F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9601D149-EFEC-4B78-BA54-9FCF9B914F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8BE608C-C890-4DD1-9AFA-44CD20875F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8BE608C-C890-4DD1-9AFA-44CD20875F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8BE608C-C890-4DD1-9AFA-44CD20875F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8BE608C-C890-4DD1-9AFA-44CD20875F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903C0004-81DD-4368-8B91-0C558E4694F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903C0004-81DD-4368-8B91-0C558E4694F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903C0004-81DD-4368-8B91-0C558E4694F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903C0004-81DD-4368-8B91-0C558E4694F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B6B0BBC6-913B-4192-8D56-64FD79170C45} = {19D231B7-B371-4B0C-82CF-EAD9A285772B}
 		{9601D149-EFEC-4B78-BA54-9FCF9B914F6D} = {C61E52F7-14AC-493D-9D37-3DD7F01CD73B}
+		{E8BE608C-C890-4DD1-9AFA-44CD20875F61} = {19D231B7-B371-4B0C-82CF-EAD9A285772B}
+		{903C0004-81DD-4368-8B91-0C558E4694F4} = {C61E52F7-14AC-493D-9D37-3DD7F01CD73B}
 	EndGlobalSection
 EndGlobal
