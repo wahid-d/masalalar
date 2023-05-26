@@ -1,3 +1,5 @@
+using Inheritance.LibraryManagement.CustomExceptions;
+using Inheritance.LibraryManagement.Entities;
 using Xunit;
 
 public class MemberTests

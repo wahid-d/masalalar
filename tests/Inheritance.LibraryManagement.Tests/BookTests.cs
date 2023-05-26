@@ -1,3 +1,4 @@
+using Inheritance.LibraryManagement.Entities;
 using Xunit;
 
 public class BookTests
