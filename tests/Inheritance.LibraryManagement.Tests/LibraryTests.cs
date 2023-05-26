@@ -1,3 +1,5 @@
+using Inheritance.LibraryManagement.Exceptions;
+using Inheritance.LibraryManagement.Models;
 using Xunit;
 
 public class LibraryTests
