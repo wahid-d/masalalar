@@ -49,8 +49,8 @@ public class MemberTests
         Member member = new Member("John Doe");
         Book book = new Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488");
         member.BorrowBook(book);
-        var expectedMemberInfo = @"
-Member Name:        John Doe
+        var expectedMemberInfo = 
+@"Member Name:        John Doe
 Member ID:          1
 Books Borrowed:
 

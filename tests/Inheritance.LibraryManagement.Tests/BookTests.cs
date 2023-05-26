@@ -34,8 +34,8 @@ public class BookTests
     {
         // Arrange
         Book book = new Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488");
-        var expectedBookInfo = @"
-Title:          The Catcher in the Rye
+        var expectedBookInfo = 
+@"Title:          The Catcher in the Rye
 Author:         J.D. Salinger
 ISBN:           9780316769488
 Availability:   Available
