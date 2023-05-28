@@ -136,6 +136,9 @@ Here are the classes and interfaces that you need to create with their necessary
 
 By introducing interfaces with the IUser and IProduct, we create a base structure that can be specialized by implementing them (Customer and different product types) to provide specific implementations.
 
+#### :bulb: Important
+**Product**, **Customer** and **Order** IDs should be calculated and assigned in the consttructor internally. They are private fields. There should be a static private field which keeps track of Global ID count sequentially.
+
 
 ## Examples
 
@@ -164,9 +167,9 @@ Shopping Cart:
 
 ###### Removing a Product from the Shopping Cart
 ```csharp
-Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
-IProduct laptop = new Laptop(1, "Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
+IProduct laptop = new Laptop("Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
 IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
 customer.AddToCart(laptop);
@@ -188,7 +191,6 @@ Shopping Cart:
 ###### Displaying Product Information
 ```csharp
 IProduct laptop = new Laptop(
-    1, 
     "Dell Laptop", 
     999.99m, 
     10, 
@@ -209,10 +211,10 @@ Product Information:
 
 ###### Creating an Order and Calculating the Total Amount
 ```csharp
-Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
-IProduct laptop = new Laptop(1, "Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
-IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+IProduct laptop = new Laptop("Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
+IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
 customer.AddToCart(laptop);
 customer.AddToCart(laptop);
@@ -238,7 +240,7 @@ Order Products
 
 ###### Updating User Information
 ```csharp
-Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
 customer.UpdateUserInfo("Jane Smith", "jane@example.com", "456 Elm St");
 

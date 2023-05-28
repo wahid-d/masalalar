@@ -6,10 +6,10 @@ public class DisplayTextTests
     public void Customer_DisplayCart_ShouldDisplayFormattedCart()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
-        IProduct laptop = new Laptop(1, "Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        IProduct laptop = new Laptop("Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
         customer.AddToCart(laptop);
         customer.AddToCart(tShirt);
@@ -33,10 +33,10 @@ Shopping Cart:
     public void Order_DisplayOrderInfo_ShouldDisplayFormattedOrderInfo()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
-        IProduct laptop = new Laptop(1, "Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        IProduct laptop = new Laptop("Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
         customer.AddToCart(laptop);
         customer.AddToCart(laptop);
@@ -67,7 +67,7 @@ Order Products
     public void Customer_DisplayUserInfo_ShouldDisplayFormattedUserInfo()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
         customer.UpdateUserInfo("Jane Smith", "jane@example.com", "456 Elm St");
 
@@ -89,10 +89,10 @@ Customer Information:
     public void Customer_DisplayCart_ShouldTrimDataToFitColumn()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
-        IProduct laptop = new Laptop(1, "This is a long laptop name that exceeds the column width", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        IProduct laptop = new Laptop("This is a long laptop name that exceeds the column width", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
         customer.AddToCart(laptop);
         customer.AddToCart(tShirt);
@@ -116,10 +116,10 @@ Shopping Cart:
     public void Order_DisplayOrderInfo_ShouldTrimDataToFitColumn()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
-        IProduct laptop = new Laptop(1, "Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
-        IProduct tShirt = new ClothingProduct(2, "This is a long t-shirt name that exceeds the column width", 19.99m, 5, EColor.Blue, ESize.Large);
+        IProduct laptop = new Laptop("Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
+        IProduct tShirt = new ClothingProduct("This is a long t-shirt name that exceeds the column width", 19.99m, 5, EColor.Blue, ESize.Large);
 
         customer.AddToCart(laptop);
         customer.AddToCart(tShirt);
@@ -149,7 +149,7 @@ Order Products
     public void Customer_DisplayUserInfo_ShouldTrimDataToFitColumn()
     {
         // Arrange
-        Customer customer = new Customer(1, "This is a long customer name that exceeds the column width", "john@example.com", "123 Main St");
+        Customer customer = new Customer("This is a long customer name that exceeds the column width", "john@example.com", "123 Main St");
 
         customer.UpdateUserInfo("Jane Smith", "thisisalongemailaddress@example.com", "This is a long address that exceeds the column width");
 
@@ -171,8 +171,8 @@ Customer Information:
     public void Customer_AddToCart_ShouldAddProductToCart()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
         // Act
         customer.AddToCart(tShirt);
@@ -186,8 +186,8 @@ Customer Information:
     public void Customer_RemoveFromCart_ShouldRemoveProductFromCart()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
         customer.AddToCart(tShirt);
 
         // Act
@@ -201,8 +201,8 @@ Customer Information:
     public void Customer_RemoveFromCart_ShouldThrowExceptionIfProductNotInCart()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
         // Act and Assert
         Assert.Throws<InvalidOperationException>(() => customer.RemoveFromCart(tShirt));
@@ -212,8 +212,8 @@ Customer Information:
     public void Customer_DisplayCart_ShouldDisplayCartContents()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
         customer.AddToCart(tShirt);
 
         // Act
@@ -229,8 +229,8 @@ Customer Information:
     public void Customer_Checkout_ShouldCreateOrderAndClearCart()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
         customer.AddToCart(tShirt);
 
         // Act
@@ -247,11 +247,11 @@ Customer Information:
     public void Order_CalculateTotalAmount_ShouldCalculateCorrectTotalAmount()
     {
         // Arrange
-        Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
-        IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
-        IProduct laptop = new Laptop(3, "Dell Laptop", 999.99m, 2, "Dell", "Intel Core i5", 8, 256);
+        Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
+        IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+        IProduct laptop = new Laptop("Dell Laptop", 999.99m, 2, "Dell", "Intel Core i5", 8, 256);
 
-        Order order = new Order(1, customer);
+        Order order = new Order(customer);
         order.AddProduct(tShirt);
         order.AddProduct(laptop);
 
