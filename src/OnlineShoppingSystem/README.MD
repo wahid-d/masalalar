@@ -2,6 +2,81 @@
 
 In this project, you will be building an online shopping system that models the basic functionality of an e-commerce platform. The system will consist of several classes that utilize the principles of object-oriented programming, including inheritance, encapsulation, polymorphism, and abstraction.
 
+```mermaid
+classDiagram
+    IUser <|-- Customer
+    IProduct <|-- Laptop
+    IProduct <|-- ClothingProduct
+    
+    class IUser {
+        <<interface>>
+        +Name: string
+        +Email: string
+        +Address: string
+        +DisplayUserInfo(): void
+        +UpdateUserInfo(name, email, address): void
+    }
+
+    class IProduct {
+        <<interface>>
+        -ProductId: int
+        +Name: string
+        +Price: decimal
+        +Quantity: int
+        +DisplayProductInfo(): void
+    }
+
+    class Customer {
+        -CustomerId: int
+        +ShoppingCart: List~IProduct~
+        +AddToCart(IProduct): void
+        +RemoveFromCart(IProduct): void
+        +DisplayCart(): void
+        +Checkout(): Order
+    }
+
+    class Laptop {
+        +Manufacturer: string
+        +Processor: string
+        +Ram: int
+        +SsdStorage: int
+    }
+
+    class ClothingProduct {
+        +Color: EColor
+        +Size: ESize
+    }
+
+    class Order {
+        -OrderId: int
+        +Customer: Customer
+        +OrderDate: DateTime
+        +TotalAmount: decimal
+        +OrderedProducts: List~IProduct~
+        +AddProduct(IProduct): void
+        +CalculateTotalAmount(): decimal
+        +DisplayProductInfo(): void
+    }
+
+    class EColor {
+        <<enumeration>>
+        Red
+        Blue
+        Green
+        White
+        Black
+    } 
+
+    class ESize {
+        <<enumeration>>
+        ExtraSmall
+        Small
+        Medium
+        Large
+        ExtraLarge
+    }      
+```
+
 Here are the classes and interfaces that you need to create with their necessary functionality.
 
 ### `IUser.cs`
@@ -45,7 +120,7 @@ Here are the classes and interfaces that you need to create with their necessary
 | **CustomerId**: `int` | `void AddToCart(IProduct)`  | This method adds a product to the customer's shopping cart. If the product is already in the cart, it updates the quantity accordingly. |
 | **ShoppingCart**: `List<IProduct>` | `void RemoveFromCart(IProduct)`  | This method removes a product from the customer's shopping cart. If the product is not found in the cart, it throws an exception. |
 |      | `void DisplayCart()` | This method displays the contents of the customer's shopping cart, including the product name, price, and quantity.  |
-|     | `void Checkout()` | This method finalizes the customer's order by creating an Order object with the products in the shopping cart. It calculates the total amount of the order, updates the product quantities, and clears the shopping cart. |
+|     | `Order       Checkout()` | This method finalizes the customer's order by creating an Order object with the products in the shopping cart. It calculates the total amount of the order, updates the product quantities, and clears the shopping cart. |
 
 
 ### `Order.cs`
