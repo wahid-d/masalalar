@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance.LibraryManageme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance.LibraryManagement.Tests", "tests\Inheritance.LibraryManagement.Tests\Inheritance.LibraryManagement.Tests.csproj", "{903C0004-81DD-4368-8B91-0C558E4694F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShoppingSystem", "src\OnlineShoppingSystem\OnlineShoppingSystem.csproj", "{C28BF3A9-D2B3-4FBA-B356-0ED7E61D3FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShoppingSystem.Tests", "tests\OnlineShoppingSystem.Tests\OnlineShoppingSystem.Tests.csproj", "{D1F23D75-CF62-4460-9838-53D89F0E437E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,11 +44,21 @@ Global
 		{903C0004-81DD-4368-8B91-0C558E4694F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903C0004-81DD-4368-8B91-0C558E4694F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903C0004-81DD-4368-8B91-0C558E4694F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28BF3A9-D2B3-4FBA-B356-0ED7E61D3FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28BF3A9-D2B3-4FBA-B356-0ED7E61D3FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28BF3A9-D2B3-4FBA-B356-0ED7E61D3FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28BF3A9-D2B3-4FBA-B356-0ED7E61D3FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F23D75-CF62-4460-9838-53D89F0E437E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F23D75-CF62-4460-9838-53D89F0E437E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F23D75-CF62-4460-9838-53D89F0E437E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F23D75-CF62-4460-9838-53D89F0E437E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B6B0BBC6-913B-4192-8D56-64FD79170C45} = {19D231B7-B371-4B0C-82CF-EAD9A285772B}
 		{9601D149-EFEC-4B78-BA54-9FCF9B914F6D} = {C61E52F7-14AC-493D-9D37-3DD7F01CD73B}
 		{E8BE608C-C890-4DD1-9AFA-44CD20875F61} = {19D231B7-B371-4B0C-82CF-EAD9A285772B}
 		{903C0004-81DD-4368-8B91-0C558E4694F4} = {C61E52F7-14AC-493D-9D37-3DD7F01CD73B}
+		{C28BF3A9-D2B3-4FBA-B356-0ED7E61D3FF9} = {19D231B7-B371-4B0C-82CF-EAD9A285772B}
+		{D1F23D75-CF62-4460-9838-53D89F0E437E} = {C61E52F7-14AC-493D-9D37-3DD7F01CD73B}
 	EndGlobalSection
 EndGlobal
