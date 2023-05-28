@@ -144,10 +144,10 @@ By introducing interfaces with the IUser and IProduct, we create a base structur
 
 ###### Adding Products to the Shopping Cart and Displaying Cart
 ```csharp
-Customer customer = new Customer(1, "John Doe", "john@example.com", "123 Main St");
+Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
-IProduct laptop = new Laptop(1, "Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
-IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+IProduct laptop = new Laptop("Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
+IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
 customer.AddToCart(laptop);
 customer.AddToCart(tShirt);
@@ -170,7 +170,7 @@ Shopping Cart:
 Customer customer = new Customer("John Doe", "john@example.com", "123 Main St");
 
 IProduct laptop = new Laptop("Dell Laptop", 999.99m, 10, "Dell", "Intel Core i7", 16, 512);
-IProduct tShirt = new ClothingProduct(2, "T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
+IProduct tShirt = new ClothingProduct("T-Shirt", 19.99m, 5, EColor.Blue, ESize.Large);
 
 customer.AddToCart(laptop);
 customer.AddToCart(tShirt);
