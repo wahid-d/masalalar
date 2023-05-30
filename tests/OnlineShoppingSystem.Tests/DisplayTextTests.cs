@@ -1,3 +1,4 @@
+using OnlineShoppingSystem;
 using Xunit;
 
 public class DisplayTextTests
